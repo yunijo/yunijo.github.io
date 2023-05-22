@@ -6,6 +6,7 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 import { Routes, Route, useLocation } from 'react-router-dom';
 import { TransitionGroup, CSSTransition } from 'react-transition-group';
 
+import Header from './Header';
 import Main from './Main';
 import Intro from './Intro';
 import Project from './Project';
@@ -18,6 +19,7 @@ function App() {
   return (
     <div className="App">
 
+      <Header/>
       <TransitionGroup className="transitions-wrapper">
         <CSSTransition key={location.pathname} timeout={300} className="slide">
        
