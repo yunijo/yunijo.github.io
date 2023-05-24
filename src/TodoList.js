@@ -12,27 +12,34 @@ import {
 import uuid from 'react-uuid';
 import 'bootstrap/dist/css/bootstrap.min.css';
 
+import './TodoList.css';
+
 function TodoList() {
+
+  const now = new Date();
+  const month = ["Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov", "Dec"];
+  const today = now.getFullYear().toString() + month[now.getMonth()+1] + now.getDate().toString();
   const [items, setItems] = useState(() => [
     {
       id: uuid(),
-      text: '방 청소',
+      text: '방 청소하기',
       nodeRef: createRef(null),
     },
     {
       id: uuid(),
-      text: '천국의 계단 20분',
+      text: '유산소 20분',
       nodeRef: createRef(null),
     },
     {
       id: uuid(),
-      text: '미드 시청',
+      text: '분리수거',
       nodeRef: createRef(null),
     },
   ]);
   return (
-    <Container style={{ marginTop: '2rem' }}>
+    <Container>
       <ListGroup style={{ marginBottom: '1rem' }}>
+        <ul><li>{today}</li><li>TODO LIST</li></ul>
         <TransitionGroup className="todo-list">
           {items.map(({ id, text, nodeRef }) => (
             <CSSTransition

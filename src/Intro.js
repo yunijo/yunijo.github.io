@@ -4,7 +4,7 @@ function Intro() {
 
  
     return  (
-        <div>introaaaaaaaaaaaaaaaaaaaa</div>
+        <div>intro</div>
     );
     
     

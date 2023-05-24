@@ -1,11 +1,13 @@
 import React, { Component } from 'react';
 
+import dog from './dog.png';
+
 class Header extends Component {
 
 
     render(){
         return  (
-            <div>Header</div>
+            <div></div>
         );
     }
     
